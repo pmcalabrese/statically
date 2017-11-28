@@ -21,6 +21,7 @@ async function run(url: IUrl) {
 
     let html = await chromeless
         .goto(url.url)
+        .wait(4000)
         .html();
 
     let $ = cheerio.load(html);

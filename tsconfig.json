@@ -62,6 +62,7 @@
     },
     "exclude": [
         "node_modules",
-        "example"
+        "example",
+        "lit-html-example"
     ]
   }

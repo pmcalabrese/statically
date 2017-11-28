@@ -1,0 +1,18 @@
+{
+  "name": "lit-cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-static": "webpack && staticly --config ./staticly.config.js"
+  },
+  "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.2.1",
+    "lit-html": "^0.7.1",
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1"
+  }
+}
