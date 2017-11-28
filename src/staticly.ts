@@ -21,7 +21,7 @@ async function run(url: IUrl) {
 
     let html = await chromeless
         .goto(url.url)
-        .wait(4000)
+        .wait(5000)
         .html();
 
     let $ = cheerio.load(html);
@@ -38,11 +38,7 @@ async function run(url: IUrl) {
     writeFileAsync(url.dist_file, html).then((err) => {
         if (err) throw err;
         console.log(`${url.dist_file} generated!`)
-    }).catch((err) => {
-        if (err) {
-            console.log(err);
-        }
-    });
+    }).catch(console.error.bind(console));
 
     await chromeless.end()
 }
