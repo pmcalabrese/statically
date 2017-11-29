@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-static": "webpack && statically --config ./staticly.config.js"
+    "build-static": "webpack && statically --config ./statically.config.js"
   },
   "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
   "license": "ISC",
