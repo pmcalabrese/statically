@@ -19,6 +19,7 @@ Since in this case we are _just_ rendering some static data, it would be much be
 Basically we should go from something like:
 
 ```html
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@ Basically we should go from something like:
     <title>Document</title>
 </head>
 <body>
-    <h1>Vamos</h1>
+    <h1>Example</h1>
 
     <div id="app"></div>
 
@@ -42,6 +43,7 @@ _Note: The html nodes with the attribute `data-remove` will be removed automatic
 to something like:
 
 ```html
+<!-- index.html -->
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +51,7 @@ to something like:
     <title>Document</title>
 </head>
 <body>
-    <h1>Vamos</h1>
+    <h1>Example</h1>
 
     <div id="app"><div>Hello Kevin!</div></div>
 
@@ -61,7 +63,7 @@ This is nice, beacuse we can carry on developing with a comfortable rendering te
 
 Staticly will allow you to do that with ease. All you need is a simple config file. The config file `staticly.config.js` will contains the list of urls that need to became a file.
 
-Let's have a look at the `lit-html-example`.
+Let's have a look at the `lit-html-example` folder.
 
 ```js
 // staticly.config.js
@@ -82,14 +84,30 @@ $ cd lit-html-example
 $ webpack
 ````
 
-this will generate a dist folder, lets serve the folder with http-server tool.
+this will generate a dist folder, lets serve the folder with `http-server` tool like so:
 
 ```sh
 $ http-server -p 8081 dist
 ```
-now we can run staticly. Watch out that the port of the config must match the port of the server
+
+Now we can run `staticly`. Remember that the port in the config file must match the port of the server (in this specifi example i chose 8081)
+
 ```sh
 $ staticly --config ../staticly.config.js
 ```
 
-lit-html is just an example, this tool is appliacable for any render lib, like React Preact etc.
+_Final note: lit-html is just an example, this tool is appliacable for any render lib, like React Preact etc._
+
+## CLI usage
+
+you can use with a config file
+
+```sh
+$ staticly --config ../staticly.config.js
+```
+
+or passing an url and a file
+
+```sh
+staticly --url www.google.com --file google.html
+```
