@@ -1,1 +1,1 @@
-export * from './staticly';
+export * from './statically';
