@@ -31,9 +31,10 @@ Basically we should go from something like:
 <body>
     <h1>Example</h1>
 
-    <div id="app"></div>
+    <div id="hello"></div>
+    <div id="github"></div>
 
-    <script data-remove src="./index.entry.js"></script>
+    <script data-remove src="./index.static.js"></script>
 </body>
 </html>
 ```
@@ -53,9 +54,11 @@ to something like:
 <body>
     <h1>Example</h1>
 
-    <div id="app"><div>Hello Kevin!</div></div>
+    <div id="hello"><div>Hello Kevin!</div></div>
+    <div id="github"><p>Github username: Pachito Marco Calabrese is located in Denmark and is a a telecommunication engineer with the passion for mixing web and embedded systems and is known on GitHub as pmcalabrese, he has 30 repos</p></div>
 
-    <!-- no script here and the name app has been replaced and prerendered -->    
+    <!-- note there is no script here -->
+
 </body></html>
 ```
 
