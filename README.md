@@ -1,6 +1,6 @@
-# Staticly
+# Statically
 
-Staticaly is a simple tool that allows you to build static website from urls.
+Statically is a simple tool that allows you to build static website from urls.
 
 Let's say you want to build an app or a website, and you use a template engine like `lit-html` or `Preact` for example.Your code will look like something like the one in `lit-html-example` folder.
 If you run `webpack` it will generate a `dist` folder containing an `index.html` file and `index.entry.js`. This is perfectly fine and it will work, in fact if you run:
@@ -64,7 +64,7 @@ to something like:
 
 This is nice, beacuse we can carry on developing with a comfortable rendering template like `lit-html` and prerendering (for example just before deploy) for good performance and SEO.
 
-Staticly will allow you to do that with ease. All you need is a simple config file. The config file `staticly.config.js` will contains the list of urls that need to became a file.
+Statically will allow you to do that with ease. All you need is a simple config file. The config file `Statically.config.js` will contains the list of urls that need to became a file.
 
 Let's have a look at the `lit-html-example` folder.
 
