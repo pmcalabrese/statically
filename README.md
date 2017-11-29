@@ -1,5 +1,13 @@
 # Statically
 
+## Install
+
+```sh
+$ npm install statically
+```
+
+## How it works
+
 Statically is a simple tool that allows you to build static website from urls.
 
 Let's say you want to build an app or a website, and you use a template engine like `lit-html` or `Preact` for example.Your code will look like something like the one in `lit-html-example` folder.
