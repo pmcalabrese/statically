@@ -8,9 +8,9 @@ $ npm install statically
 
 ## How it works
 
-Statically is a simple tool that allows you to build static website from urls.
+Statically is a simple tool that allows you to build static websites from urls.
 
-Let's say you want to build an app or a website, and you use a template engine like `lit-html` or `Preact` for example.Your code will look like something like the one in `lit-html-example` folder.
+Let's say you want to build an app or a website, and you use a template engine like `lit-html` or `Preact` for example. Your code will look like the one in `lit-html-example` folder.
 If you run `webpack` it will generate a `dist` folder containing an `index.html` file and `index.entry.js`. This is perfectly fine and it will work, in fact if you run:
 
 ```sh
@@ -20,7 +20,7 @@ $ http-server dist
 you will see the site up and running. So what's the problem? Well there are 2 main problems with it:
 
 - Client Rendering
-- Network Request for data that could be statically rendered, which will results in a less performant website.
+- Network Request for data that could be statically rendered, which will result in a less performant website.
 
 Since in this case we are _just_ rendering some static data, it would be much better to prerender them as much as possible, and remove the scripts that are not necessary anymore as well, so we do not have to request them over the network on runtime.
 
@@ -77,7 +77,7 @@ Statically will allow you to do that with ease. All you need is a simple config 
 Let's have a look at the `lit-html-example` folder.
 
 ```js
-// staticly.config.js
+// statically.config.js
 const path = require("path");
 
 const urls = [{
@@ -95,16 +95,16 @@ $ cd lit-html-example
 $ webpack
 ````
 
-this will generate a dist folder, lets serve the folder with `http-server` tool like so:
+this will generate a dist folder, let's serve the folder with `http-server` tool like so:
 
 ```sh
 $ http-server -p 8081 dist
 ```
 
-Now we can run `staticly`. Remember that the port in the config file must match the port of the server (in this specifi example i chose 8081)
+Now we can run `statically`. Remember that the port in the config file must match the port of the server (in this specific example I chose 8081)
 
 ```sh
-$ staticly --config ../staticly.config.js
+$ statically --config ../statically.config.js
 ```
 
 _Final note: lit-html is just an example, this tool is appliacable for any render lib, like React Preact etc._
@@ -114,11 +114,11 @@ _Final note: lit-html is just an example, this tool is appliacable for any rende
 you can use with a config file
 
 ```sh
-$ staticly --config ../staticly.config.js
+$ statically --config ../statically.config.js
 ```
 
 or passing an url and a file
 
 ```sh
-staticly --url www.google.com --file google.html
+statically --url www.google.com --file google.html
 ```
