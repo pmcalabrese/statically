@@ -1,7 +1,7 @@
 {
   "name": "statically",
   "version": "1.0.0",
-  "description": "A simple tool that allows you to build static website from urls.",
+  "description": "A simple tool for build static website from urls.",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf lib && tsc",
